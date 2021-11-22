@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+</head>
+<body onload='doReady()'>
+    <img src="nezuko.jpg" id="pika" style="position: absolute; top: 0px; left: 0px;height: 250px; width: 250px;" >
+    <script>
+        function keypressedRight() {
+            var a = document.getElementById('pika');
+            a.style.left = parseInt(a.style.left) + 10 +'px';
+        }
+        function keypressedLeft() {
+            var a = document.getElementById('pika');
+            a.style.left = parseInt(a.style.left) - 10 + 'px';
+        
+        }
+        function keypressedUp() {
+            var a = document.getElementById('pika');
+            a.style.top = parseInt(a.style.top) - 10 +'px';
+        
+        }
+        function keypressedDown() {
+            var a = document.getElementById('pika');
+            a.style.top = parseInt(a.style.top) + 10 +'px';
+        
+        }
+        function MovewithKey(evt) {
+            switch(evt.keyCode) {
+                case 40 : 
+                    keypressedDown();
+                    break;
+                case 38 : 
+                    keypressedUp();
+                    break;
+                case 39 :
+                    keypressedRight();
+                    break;
+                case 37 : 
+                    keypressedLeft();
+                    break;
+                
+    
+                    
+                    
+                
+            }
+        
+        }
+        function doReady() {
+            window.addEventListener('keydown',MovewithKey);
+        }
+
+       
+
+    </script>
+    
+    
+ 
+
+
+
+</body>
+</html>
